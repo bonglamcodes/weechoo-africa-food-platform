@@ -1,6 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Building2, Users, Star, Award, MapPin } from "lucide-react";
+import pavelonLogo from "@/assets/pavelon-logo.png";
+import ascendLogo from "@/assets/ascend-logo.png";
+import boseaLogo from "@/assets/bosea-logo.png";
+import creditmallLogo from "@/assets/creditmall-logo.png";
 
 const TrustedCustomers = () => {
   const customers = [
@@ -10,7 +15,7 @@ const TrustedCustomers = () => {
       location: "Lagos, Nigeria",
       employees: "500+",
       description: "Leading financial services provider trusting Weechoo for daily corporate meals",
-      logo: "CM"
+      logo: creditmallLogo
     },
     {
       name: "Ascend Ghana",
@@ -18,7 +23,7 @@ const TrustedCustomers = () => {
       location: "Accra, Ghana", 
       employees: "200+",
       description: "Fast-growing tech company scaling with Weechoo's flexible meal solutions",
-      logo: "AG"
+      logo: ascendLogo
     },
     {
       name: "Pavelon Technologies",
@@ -26,7 +31,7 @@ const TrustedCustomers = () => {
       location: "Lagos, Nigeria",
       employees: "150+", 
       description: "Innovative software company enhancing employee experience with Weechoo",
-      logo: "PT"
+      logo: pavelonLogo
     },
     {
       name: "Bosea Ghana",
@@ -34,7 +39,7 @@ const TrustedCustomers = () => {
       location: "Kumasi, Ghana",
       employees: "300+",
       description: "Manufacturing leader providing quality meals to workforce through Weechoo",
-      logo: "BG"
+      logo: boseaLogo
     },
     {
       name: "DataFlow Systems", 
@@ -114,43 +119,65 @@ const TrustedCustomers = () => {
           ))}
         </div>
 
-        {/* Customer Grid */}
+        {/* Customer Carousel */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Companies We're Proud to Serve</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {customers.map((customer, index) => (
-              <Card key={index} className="border-border/20 bg-card/50 hover:shadow-warm transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
-                      {customer.logo}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-semibold text-foreground mb-1">{customer.name}</h4>
-                      <Badge variant="outline" className="text-xs">
-                        {customer.industry}
-                      </Badge>
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {customer.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-muted-foreground">
-                    <div className="flex items-center space-x-1">
-                      <MapPin className="w-4 h-4" />
-                      <span>{customer.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Users className="w-4 h-4" />
-                      <span>{customer.employees}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {customers.map((customer, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="border-border/20 bg-card/50 hover:shadow-warm transition-all duration-300 hover:scale-105 h-full">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <div className="flex items-start space-x-4 mb-4">
+                        <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2 shadow-sm">
+                          {typeof customer.logo === 'string' ? (
+                            <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
+                              {customer.logo}
+                            </div>
+                          ) : (
+                            <img 
+                              src={customer.logo} 
+                              alt={`${customer.name} logo`} 
+                              className="w-full h-full object-contain"
+                            />
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-xl font-semibold text-foreground mb-1">{customer.name}</h4>
+                          <Badge variant="outline" className="text-xs">
+                            {customer.industry}
+                          </Badge>
+                        </div>
+                      </div>
+                      
+                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed flex-grow">
+                        {customer.description}
+                      </p>
+                      
+                      <div className="flex items-center justify-between text-sm text-muted-foreground">
+                        <div className="flex items-center space-x-1">
+                          <MapPin className="w-4 h-4" />
+                          <span>{customer.location}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Users className="w-4 h-4" />
+                          <span>{customer.employees}</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
 
         {/* Testimonial Section */}
