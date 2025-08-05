@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ForInstitutions from "@/components/ForInstitutions";
 import ForEmployees from "@/components/ForEmployees";
 import ForVendors from "@/components/ForVendors";
+import TrustedCustomers from "@/components/TrustedCustomers";
 import PlatformTech from "@/components/PlatformTech";
 import AboutUs from "@/components/AboutUs";
 import Footer from "@/components/Footer";
@@ -15,6 +16,7 @@ const Index = () => {
       <ForInstitutions />
       <ForEmployees />
       <ForVendors />
+      <TrustedCustomers />
       <PlatformTech />
       <AboutUs />
       <Footer />

@@ -25,6 +25,9 @@ const Header = () => {
             <a href="#employees" className="text-foreground hover:text-primary transition-colors font-medium">
               Employee Portal
             </a>
+            <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
+              Our Customers
+            </a>
             <a href="#platform" className="text-foreground hover:text-primary transition-colors font-medium">
               Platform & Tech
             </a>
@@ -63,6 +66,9 @@ const Header = () => {
               </a>
               <a href="#employees" className="text-foreground hover:text-primary transition-colors font-medium">
                 Employee Portal
+              </a>
+              <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
+                Our Customers
               </a>
               <a href="#platform" className="text-foreground hover:text-primary transition-colors font-medium">
                 Platform & Tech
