@@ -1,144 +1,181 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Smartphone, Calendar, History, Settings, Clock, Star, ArrowRight } from "lucide-react";
-import mobileAppImage from "@/assets/mobile-app-preview.jpg";
+import { Clock, Calendar, Star, Shield, CheckCircle, Smartphone, Bell, CreditCard } from "lucide-react";
+import officeLunchImage from "@/assets/office-lunch.jpg";
 
 const ForEmployees = () => {
-  return (
-    <section id="employees" className="py-20 bg-gradient-warm">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="text-foreground">Employee</span>
-                <br />
-                <span className="bg-gradient-hero bg-clip-text text-transparent">Web Portal</span>
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Take control of your daily meals with our intuitive web portal. Browse menus, set preferences, and track your orders - all while keeping HR out of the process.
-              </p>
-              <Button variant="accent" size="lg">
-                Access Portal
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </div>
-            <div className="relative">
-              <img 
-                src={mobileAppImage} 
-                alt="Employee portal mobile interface" 
-                className="rounded-2xl shadow-warm w-full h-80 object-cover"
-              />
-            </div>
-          </div>
-        </div>
+  const benefits = [
+    {
+      icon: <Calendar className="w-8 h-8 text-primary" />,
+      title: "Weekly Menu Planning",
+      description: "Order your entire week's meals every Friday for the following week",
+      color: "primary"
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-secondary" />,
+      title: "Time-Saving",
+      description: "No more lunch queues or meal decisions - everything pre-ordered and delivered",
+      color: "secondary"
+    },
+    {
+      icon: <Star className="w-8 h-8 text-accent" />,
+      title: "Quality Assured",
+      description: "Every meal from verified vendors with quality guarantees",
+      color: "accent"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-primary-glow" />,
+      title: "Secure Payments",
+      description: "Company-sponsored meals with seamless billing integration",
+      color: "primary-glow"
+    }
+  ];
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Portal Demo */}
-          <div className="order-2 lg:order-1">
-            <Card className="bg-card shadow-warm">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Daily Meal Selection</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div>
-                  <Label htmlFor="email">Company Email</Label>
-                  <Input id="email" placeholder="your.email@company.com" />
-                </div>
-                <div>
-                  <Label htmlFor="password">Password</Label>
-                  <Input id="password" type="password" placeholder="Enter your password" />
-                </div>
-                <Button className="w-full" variant="default">
-                  Access Portal
-                </Button>
+  return (
+    <section id="employees" className="py-20 bg-gradient-subtle">
+      <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+              <span className="bg-gradient-hero bg-clip-text text-transparent">Employee Portal</span>
+              <br />
+              <span className="text-foreground">Made Simple</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              A beautiful, intuitive platform that makes meal ordering effortless. Your employees will love the seamless experience.
+            </p>
+          </div>
+
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="border-0 bg-card/60 backdrop-blur-sm hover:shadow-warm transition-all duration-300 hover:scale-105 hover:bg-card/80">
+                <CardHeader className="text-center pb-4">
+                  <div className={`mx-auto mb-4 p-4 rounded-2xl bg-${benefit.color}/10`}>
+                    {benefit.icon}
+                  </div>
+                  <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-muted-foreground text-center text-sm">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Portal Preview Section */}
+          <div className="bg-card/30 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-border/20 mb-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold mb-6 text-foreground">
+                  Experience the Portal
+                </h3>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Our intuitive interface makes meal selection and ordering a delightful experience for every employee.
+                </p>
                 
-                {/* Sample Menu Preview */}
-                <div className="border-t pt-6 mt-6">
-                  <h4 className="font-semibold mb-4">Today's Menu Preview</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 border rounded-lg hover:bg-muted/50 cursor-pointer">
-                      <div>
-                        <p className="font-medium">Jollof Rice with Grilled Chicken</p>
-                        <p className="text-sm text-muted-foreground">Mama Kemi's Kitchen</p>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-accent fill-current" />
-                        <span className="text-sm">4.8</span>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Real-time menu updates</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span className="text-muted-foreground">Smart notification system</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <span className="text-muted-foreground">Dietary preference tracking</span>
+                  </div>
+                </div>
+
+                <Button variant="hero" size="lg" className="group">
+                  View Portal Demo
+                  <Smartphone className="ml-2 group-hover:rotate-12 transition-transform" size={20} />
+                </Button>
+              </div>
+
+              <div className="relative">
+                <div className="bg-gradient-warm rounded-2xl p-1">
+                  <div className="bg-background rounded-2xl p-6">
+                    {/* Mock Portal Interface */}
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="text-lg font-semibold">Hello, Kwame! 👋</h4>
+                      <div className="flex items-center gap-2">
+                        <Bell className="w-5 h-5 text-muted-foreground" />
+                        <span className="w-2 h-2 bg-primary rounded-full"></span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between p-3 border rounded-lg hover:bg-muted/50 cursor-pointer">
-                      <div>
-                        <p className="font-medium">Vegetarian Curry Bowl</p>
-                        <p className="text-sm text-muted-foreground">Green Garden Cafe</p>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-accent fill-current" />
-                        <span className="text-sm">4.6</span>
-                      </div>
+                    
+                    <div className="bg-primary/5 rounded-xl p-4 mb-6">
+                      <h5 className="font-medium mb-2">This Week's Menu</h5>
+                      <p className="text-sm text-muted-foreground">Week of March 18-22, 2024 • Akosombo Kitchen, Accra</p>
                     </div>
-                    <div className="flex items-center justify-between p-3 border rounded-lg hover:bg-muted/50 cursor-pointer">
-                      <div>
-                        <p className="font-medium">Fish & Chips</p>
-                        <p className="text-sm text-muted-foreground">Coastal Bites</p>
+                    
+                    <div className="space-y-3">
+                      {[
+                        { day: "Monday", meal: "Jollof Rice & Grilled Chicken", price: "₵25", status: "ordered" },
+                        { day: "Tuesday", meal: "Waakye with Fish", price: "₵22", status: "ordered" },
+                        { day: "Wednesday", meal: "Banku & Tilapia", price: "₵28", status: "available" }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
+                          <div>
+                            <p className="font-medium text-sm">{item.day}</p>
+                            <p className="text-xs text-muted-foreground">{item.meal}</p>
+                          </div>
+                          <div className="text-right">
+                            <p className="font-medium text-sm">{item.price}</p>
+                            <span className={`text-xs px-2 py-1 rounded-full ${
+                              item.status === 'ordered' 
+                                ? 'bg-primary/10 text-primary' 
+                                : 'bg-muted text-muted-foreground'
+                            }`}>
+                              {item.status === 'ordered' ? 'Ordered' : 'Available'}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-6 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <CreditCard className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">Company Sponsored</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-accent fill-current" />
-                        <span className="text-sm">4.7</span>
-                      </div>
+                      <Button size="sm" variant="hero">Complete Order</Button>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
-          {/* Features */}
-          <div className="order-1 lg:order-2 space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Calendar className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Browse Daily/Weekly Menus</h3>
-                <p className="text-muted-foreground">View all available meals from local vendors with detailed descriptions, ratings, and nutritional information.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                <Settings className="w-6 h-6 text-secondary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Dietary Preferences</h3>
-                <p className="text-muted-foreground">Set your allergies, dietary restrictions, and preferences once. The system will automatically filter suitable options.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                <History className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Order History & Tracking</h3>
-                <p className="text-muted-foreground">Track your meal history, favorite dishes, and monitor delivery status in real-time.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary-glow/10 rounded-lg flex items-center justify-center">
-                <Clock className="w-6 h-6 text-primary-glow" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Smart Order Cut-off</h3>
-                <p className="text-muted-foreground">Automatic reminders and smart cut-off times ensure you never miss your meal selection deadline.</p>
-              </div>
+          {/* Process Flow */}
+          <div>
+            <h3 className="text-3xl font-bold text-center mb-12 text-foreground">How It Works</h3>
+            <div className="grid md:grid-cols-4 gap-8">
+              {[
+                { step: "1", title: "Friday Planning", desc: "Browse next week's menu and select your preferred meals", color: "primary" },
+                { step: "2", title: "Order Confirmation", desc: "Review and confirm your weekly meal schedule", color: "secondary" },
+                { step: "3", title: "Preparation Updates", desc: "Get notified when your meals are being prepared", color: "accent" },
+                { step: "4", title: "Delivery", desc: "Fresh meals delivered right to your office", color: "primary-glow" }
+              ].map((item, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`bg-${item.color}/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    {index === 3 ? (
+                      <CheckCircle className={`w-10 h-10 text-${item.color}`} />
+                    ) : (
+                      <span className={`text-3xl font-bold text-${item.color}`}>{item.step}</span>
+                    )}
+                  </div>
+                  <h4 className="font-semibold mb-3 text-lg">{item.title}</h4>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

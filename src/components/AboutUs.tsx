@@ -105,13 +105,10 @@ const AboutUs = () => {
 
 
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to be part of Africa's food revolution?</h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <h3 className="text-2xl font-bold mb-4 text-foreground">Transform your institution's meal experience</h3>
+          <div className="flex justify-center">
             <Button variant="hero" size="xl">
-              Join as Institution
-            </Button>
-            <Button variant="secondary" size="xl">
-              Become a Vendor
+              Book a Demo
             </Button>
           </div>
         </div>
