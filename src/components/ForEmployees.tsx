@@ -2,21 +2,37 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Smartphone, Calendar, History, Settings, Clock, Star } from "lucide-react";
+import { Smartphone, Calendar, History, Settings, Clock, Star, ArrowRight } from "lucide-react";
+import mobileAppImage from "@/assets/mobile-app-preview.jpg";
 
 const ForEmployees = () => {
   return (
     <section id="employees" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Employee</span>
-            <br />
-            <span className="bg-gradient-hero bg-clip-text text-transparent">Web Portal Access</span>
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Take control of your daily meals with our intuitive web portal. No more coordination with HR - just great food, your way.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-foreground">Employee</span>
+                <br />
+                <span className="bg-gradient-hero bg-clip-text text-transparent">Web Portal</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                Take control of your daily meals with our intuitive web portal. Browse menus, set preferences, and track your orders - all while keeping HR out of the process.
+              </p>
+              <Button variant="accent" size="lg">
+                Access Portal
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+            <div className="relative">
+              <img 
+                src={mobileAppImage} 
+                alt="Employee portal mobile interface" 
+                className="rounded-2xl shadow-warm w-full h-80 object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -123,39 +139,6 @@ const ForEmployees = () => {
           </div>
         </div>
 
-        {/* Benefits Summary */}
-        <div className="bg-background/50 backdrop-blur-sm rounded-2xl p-8 lg:p-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4 text-foreground">Why Employees Love Our Portal</h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Our web portal puts you in control of your daily meals, eliminating the need to coordinate with HR or miss out on lunch.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                <Smartphone className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Easy Access</h4>
-              <p className="text-muted-foreground">Simple login with your company email. Works on any device, anywhere.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Quality Choices</h4>
-              <p className="text-muted-foreground">Curated meals from top local vendors with quality ratings and reviews.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Time Saving</h4>
-              <p className="text-muted-foreground">Quick selection process that takes less than 2 minutes daily.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

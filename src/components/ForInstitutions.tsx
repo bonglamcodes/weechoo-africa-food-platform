@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Users, CreditCard, BarChart3, Heart } from "lucide-react";
+import { CheckCircle, Clock, Users, CreditCard, BarChart3, Heart, ArrowRight } from "lucide-react";
+import officeImage from "@/assets/office-lunch.jpg";
 
 const ForInstitutions = () => {
   const benefits = [
@@ -39,15 +40,30 @@ const ForInstitutions = () => {
   return (
     <section id="institutions" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Transform Your</span>
-            <br />
-            <span className="bg-gradient-hero bg-clip-text text-transparent">Corporate Meal Program</span>
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Give your employees the freedom to choose their meals while eliminating administrative overhead for HR teams.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-foreground">For</span>
+                <br />
+                <span className="bg-gradient-hero bg-clip-text text-transparent">Institutions</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                Transform your employee meal program with our comprehensive corporate food solutions. From setup to daily delivery, we handle everything.
+              </p>
+              <Button variant="hero" size="lg">
+                Get Started Today
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+            <div className="relative">
+              <img 
+                src={officeImage} 
+                alt="Happy employees enjoying corporate lunch" 
+                className="rounded-2xl shadow-warm w-full h-80 object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

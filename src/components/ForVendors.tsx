@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Users, MapPin, Truck, DollarSign, Shield, ChefHat, BarChart } from "lucide-react";
+import { TrendingUp, Users, MapPin, Truck, DollarSign, Shield, ChefHat, BarChart, ArrowRight } from "lucide-react";
+import vendorImage from "@/assets/vendor-kitchen.jpg";
 
 const ForVendors = () => {
   const benefits = [
@@ -39,15 +40,30 @@ const ForVendors = () => {
   return (
     <section id="vendors" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Join Africa's Premier</span>
-            <br />
-            <span className="bg-gradient-hero bg-clip-text text-transparent">Cloud Kitchen Ecosystem</span>
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Scale your food business with our infrastructure, reach thousands of corporate customers, and focus on what you do best - creating amazing meals.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative">
+              <img 
+                src={vendorImage} 
+                alt="Professional cloud kitchen environment" 
+                className="rounded-2xl shadow-warm w-full h-80 object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-foreground">For</span>
+                <br />
+                <span className="bg-gradient-hero bg-clip-text text-transparent">Food Vendors</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                Join Africa's fastest-growing cloud kitchen ecosystem. Access thousands of corporate clients, world-class infrastructure, and the tools you need to scale.
+              </p>
+              <Button variant="secondary" size="lg">
+                Join Our Ecosystem
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

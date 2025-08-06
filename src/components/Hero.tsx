@@ -32,9 +32,25 @@ const Hero = () => {
             Restaurants reimagined. Building the food infrastructure for Africa.
           </p>
 
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             From corporate lunch solutions to cloud kitchen ecosystem - we're transforming how institutions and food vendors connect across the continent.
           </p>
+
+          {/* Built For Section */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold mb-6 text-foreground">Built for</h3>
+            <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+              <div className="bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
+                <span className="text-primary font-medium">🏢 Institutions</span>
+              </div>
+              <div className="bg-secondary/10 px-6 py-3 rounded-full border border-secondary/20">
+                <span className="text-secondary font-medium">🍽️ Restaurants</span>
+              </div>
+              <div className="bg-accent/10 px-6 py-3 rounded-full border border-accent/20">
+                <span className="text-accent font-medium">📱 Virtual Delivery Brands</span>
+              </div>
+            </div>
+          </div>
 
           {/* Primary CTA */}
           <div className="mb-16">

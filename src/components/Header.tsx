@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import weechooLogo from "@/assets/weechoo-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +11,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-md"></div>
-            <span className="text-2xl font-bold text-foreground">Weechoo</span>
+            <img src={weechooLogo} alt="Weechoo" className="h-8 w-auto" />
           </div>
           
           {/* Desktop Navigation */}
@@ -25,11 +25,11 @@ const Header = () => {
             <a href="#employees" className="text-foreground hover:text-primary transition-colors font-medium">
               Employee Portal
             </a>
+            <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
+              How It Works
+            </a>
             <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
               Our Customers
-            </a>
-            <a href="#platform" className="text-foreground hover:text-primary transition-colors font-medium">
-              Platform & Tech
             </a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
               About Us
@@ -67,11 +67,11 @@ const Header = () => {
               <a href="#employees" className="text-foreground hover:text-primary transition-colors font-medium">
                 Employee Portal
               </a>
+              <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
+                How It Works
+              </a>
               <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
                 Our Customers
-              </a>
-              <a href="#platform" className="text-foreground hover:text-primary transition-colors font-medium">
-                Platform & Tech
               </a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us

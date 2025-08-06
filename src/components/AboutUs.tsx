@@ -102,70 +102,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Journey Timeline */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Our Journey</h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-lg">
-                    {milestone.year}
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">{milestone.title}</h4>
-                  <p className="text-muted-foreground text-sm">{milestone.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        {/* Future Vision */}
-        <div className="bg-background/50 backdrop-blur-sm rounded-2xl p-8 lg:p-12 mb-16">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-3xl font-bold mb-6 text-foreground">The Road Ahead</h3>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                We're not just building a food delivery service. We're creating the infrastructure that will power the next generation of food businesses across Africa.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Rocket className="w-6 h-6 text-primary" />
-                  <span className="text-foreground">Kitchen-as-a-Service platform for food entrepreneurs</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Award className="w-6 h-6 text-secondary" />
-                  <span className="text-foreground">White-label fulfillment for digital food brands</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <TrendingUp className="w-6 h-6 text-accent" />
-                  <span className="text-foreground">Platform licensing across African markets</span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-hero/10 rounded-lg p-8 text-center">
-              <h4 className="text-2xl font-bold mb-4 text-foreground">2026 Vision</h4>
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">5</div>
-                  <div className="text-muted-foreground text-sm">African Countries</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-secondary mb-2">500+</div>
-                  <div className="text-muted-foreground text-sm">Partner Companies</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent mb-2">1000+</div>
-                  <div className="text-muted-foreground text-sm">Cloud Kitchens</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary-glow mb-2">100k+</div>
-                  <div className="text-muted-foreground text-sm">Daily Orders</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to be part of Africa's food revolution?</h3>
