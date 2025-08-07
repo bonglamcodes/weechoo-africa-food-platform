@@ -56,9 +56,9 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-border/20 hover:shadow-warm transition-all duration-300 hover:scale-105">
+            <div className="bg-dark/20 backdrop-blur-sm p-6 rounded-lg border border-border/20 hover:shadow-warm transition-all duration-300 hover:scale-105">
               <Building2 className="w-12 h-12 text-secondary mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">Kitchen-as-a-Service</h3>
+              <h3 className="font-semibold mb-2 text-dark-foreground">Kitchen-as-a-Service</h3>
               <p className="text-sm text-muted-foreground mb-4">Rent kitchen space and prep time for your business</p>
               <Button variant="minimal" size="sm" className="w-full">
                 Coming Soon

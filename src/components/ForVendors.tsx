@@ -91,8 +91,8 @@ const ForVendors = () => {
                   <ChefHat className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground">Chef Amara's Kitchen</h3>
-                  <p className="text-muted-foreground">Lagos, Nigeria</p>
+                  <h3 className="text-2xl font-bold text-foreground">Chef Akwasi Kitchen</h3>
+                  <p className="text-muted-foreground">Accra, Ghana</p>
                 </div>
               </div>
               <blockquote className="text-xl font-medium mb-6 text-foreground">
