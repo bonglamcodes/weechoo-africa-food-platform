@@ -16,47 +16,50 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border/20 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-8">
             <img src={weechooLogo} alt="Weechoo" className="h-8 w-auto" />
+            
+            {/* Left side navigation */}
+            <div className="hidden md:flex items-center space-x-6">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium flex items-center">
+                  Platform
+                  <ChevronDown className="ml-1" size={16} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem>
+                    <a href="#institutions" className="w-full">For Institutions</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="#vendors" className="w-full">For Vendors</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="#employees" className="w-full">Employee Portal</a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
+                How It Works
+              </a>
+              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+                About Us
+              </a>
+            </div>
           </div>
           
-          {/* Desktop Navigation */}
+          {/* Right side navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium flex items-center">
-                Platform
-                <ChevronDown className="ml-1" size={16} />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <a href="#institutions" className="w-full">For Institutions</a>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <a href="#vendors" className="w-full">For Vendors</a>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <a href="#employees" className="w-full">Employee Portal</a>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
-              How It Works
-            </a>
             <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
-              Our Customers
+              Tour our Kitchen
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
-              About Us
-            </a>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm">
               Sign In
             </Button>
             <Button variant="default" size="sm">
               Get Started
             </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,11 +92,11 @@ const Header = () => {
               <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
                 How It Works
               </a>
-              <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
-                Our Customers
-              </a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us
+              </a>
+              <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
+                Tour our Kitchen
               </a>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" size="sm">
