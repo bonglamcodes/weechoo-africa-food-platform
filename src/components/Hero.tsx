@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Primary CTA */}
           <div className="mb-16">
             <Button variant="hero" size="xl" className="animate-pulse-glow">
-              Book a Demo
+              Join as Institution
               <ArrowRight className="ml-2" size={24} />
             </Button>
           </div>

@@ -31,6 +31,10 @@ All colors MUST be HSL.
     --accent: 45 100% 60%;
     --accent-foreground: 0 0% 9%;
 
+    /* Dark/Black tones for contrast and elegance */
+    --dark: 0 0% 15%;
+    --dark-foreground: 0 0% 98%;
+    
     /* Muted: Warm neutrals */
     --muted: 20 15% 95%;
     --muted-foreground: 20 5% 45%;

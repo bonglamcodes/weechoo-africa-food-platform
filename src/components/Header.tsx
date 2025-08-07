@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import weechooLogo from "@/assets/weechoo-logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,15 +22,23 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#institutions" className="text-foreground hover:text-primary transition-colors font-medium">
-              For Institutions
-            </a>
-            <a href="#vendors" className="text-foreground hover:text-primary transition-colors font-medium">
-              For Vendors
-            </a>
-            <a href="#employees" className="text-foreground hover:text-primary transition-colors font-medium">
-              Employee Portal
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium flex items-center">
+                Platform
+                <ChevronDown className="ml-1" size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>
+                  <a href="#institutions" className="w-full">For Institutions</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <a href="#vendors" className="w-full">For Vendors</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <a href="#employees" className="w-full">Employee Portal</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
               How It Works
             </a>
@@ -58,15 +72,20 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border/20">
             <div className="flex flex-col space-y-4">
-              <a href="#institutions" className="text-foreground hover:text-primary transition-colors font-medium">
-                For Institutions
-              </a>
-              <a href="#vendors" className="text-foreground hover:text-primary transition-colors font-medium">
-                For Vendors
-              </a>
-              <a href="#employees" className="text-foreground hover:text-primary transition-colors font-medium">
-                Employee Portal
-              </a>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-muted-foreground">Platform</p>
+                <div className="pl-4 space-y-2">
+                  <a href="#institutions" className="block text-foreground hover:text-primary transition-colors">
+                    For Institutions
+                  </a>
+                  <a href="#vendors" className="block text-foreground hover:text-primary transition-colors">
+                    For Vendors
+                  </a>
+                  <a href="#employees" className="block text-foreground hover:text-primary transition-colors">
+                    Employee Portal
+                  </a>
+                </div>
+              </div>
               <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
                 How It Works
               </a>
