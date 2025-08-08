@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, ChefHat, Building2, Tablet } from "lucide-react";
-import heroImage from "@/assets/hero-kitchen.jpg";
+import heroImage from "@/assets/african-dishes-hero.jpg";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Weechoo Cloud Kitchen" 
+          alt="African Cuisine - Weechoo Cloud Kitchen" 
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/90"></div>

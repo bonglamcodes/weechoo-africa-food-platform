@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, MapPin, Truck, DollarSign, Shield, ChefHat, BarChart, ArrowRight } from "lucide-react";
-import vendorImage from "@/assets/vendor-kitchen.jpg";
+import vendorImage from "@/assets/professional-kitchen.jpg";
 
 const ForVendors = () => {
   const benefits = [

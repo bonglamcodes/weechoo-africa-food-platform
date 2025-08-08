@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Calendar, Star, Shield, CheckCircle, Smartphone, Bell, CreditCard } from "lucide-react";
-import officeLunchImage from "@/assets/office-lunch.jpg";
+import officeLunchImage from "@/assets/office-workers-lunch.jpg";
 
 const ForEmployees = () => {
   const benefits = [
