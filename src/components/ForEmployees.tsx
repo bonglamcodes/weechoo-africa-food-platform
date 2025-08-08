@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Calendar, Star, Shield, CheckCircle, Smartphone, Bell, CreditCard } from "lucide-react";
-import officeLunchImage from "@/assets/office-workers-lunch.jpg";
+import officeLunchImage from "@/assets/office-lunch.jpg";
 
 const ForEmployees = () => {
   const benefits = [
@@ -35,16 +35,26 @@ const ForEmployees = () => {
     <section id="employees" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              <span className="bg-gradient-hero bg-clip-text text-transparent">Employee Portal</span>
-              <br />
-              <span className="text-foreground">Made Simple</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A beautiful, intuitive platform that makes meal ordering effortless. Your employees will love the seamless experience.
-            </p>
+          {/* Hero Section with Large Image */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative">
+              <img 
+                src={officeLunchImage} 
+                alt="Professional employees enjoying lunch in modern office setting"
+                className="rounded-3xl shadow-warm w-full h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-3xl"></div>
+            </div>
+            <div className="text-left">
+              <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+                <span className="bg-gradient-hero bg-clip-text text-transparent">Employee Portal</span>
+                <br />
+                <span className="text-foreground">Made Simple</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                A beautiful, intuitive platform that makes meal ordering effortless. Your employees will love the seamless experience.
+              </p>
+            </div>
           </div>
 
           {/* Benefits Grid */}
@@ -151,30 +161,6 @@ const ForEmployees = () => {
             </div>
           </div>
 
-          {/* Process Flow */}
-          <div>
-            <h3 className="text-3xl font-bold text-center mb-12 text-foreground">How It Works</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                { step: "1", title: "Friday Planning", desc: "Browse next week's menu and select your preferred meals", color: "primary" },
-                { step: "2", title: "Order Confirmation", desc: "Review and confirm your weekly meal schedule", color: "secondary" },
-                { step: "3", title: "Preparation Updates", desc: "Get notified when your meals are being prepared", color: "accent" },
-                { step: "4", title: "Delivery", desc: "Fresh meals delivered right to your office", color: "primary-glow" }
-              ].map((item, index) => (
-                <div key={index} className="text-center group">
-                  <div className={`bg-${item.color}/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    {index === 3 ? (
-                      <CheckCircle className={`w-10 h-10 text-${item.color}`} />
-                    ) : (
-                      <span className={`text-3xl font-bold text-${item.color}`}>{item.step}</span>
-                    )}
-                  </div>
-                  <h4 className="font-semibold mb-3 text-lg">{item.title}</h4>
-                  <p className="text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
