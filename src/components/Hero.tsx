@@ -45,48 +45,24 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Sub-CTAs Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {/* Key Features Grid */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-border/20 hover:shadow-warm transition-all duration-300 hover:scale-105">
               <ChefHat className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold mb-2 text-center">Food Vendors</h3>
-              <p className="text-sm text-muted-foreground mb-4 text-center">Join our ecosystem and reach thousands of companies</p>
-              <Button variant="accent" size="sm" className="w-full">
-                Join as Vendor
-              </Button>
+              <h3 className="font-semibold mb-2 text-center">Quality Assured</h3>
+              <p className="text-sm text-muted-foreground text-center">Premium ingredients and certified kitchens across Africa</p>
             </div>
 
-            <div className="bg-dark/90 backdrop-blur-sm p-6 rounded-lg border border-dark/30 hover:shadow-dark transition-all duration-300 hover:scale-105">
-              <Building2 className="w-12 h-12 text-dark-accent mx-auto mb-4" />
-              <h3 className="font-semibold mb-2 text-dark-foreground text-center">Kitchen-as-a-Service</h3>
-              <p className="text-sm text-dark-muted mb-4 text-center">Rent kitchen space and prep time for your business</p>
-              <a href="/kitchen-service">
-                <Button variant="dark" size="sm" className="w-full">
-                  Read More
-                </Button>
-              </a>
+            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-border/20 hover:shadow-warm transition-all duration-300 hover:scale-105">
+              <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold mb-2 text-center">Scalable Infrastructure</h3>
+              <p className="text-sm text-muted-foreground text-center">Cloud-based platform that grows with your business needs</p>
             </div>
 
-            <div className="bg-dark/90 backdrop-blur-sm p-6 rounded-lg border border-dark/30 hover:shadow-dark transition-all duration-300 hover:scale-105">
-              <Tablet className="w-12 h-12 text-dark-accent mx-auto mb-4" />
-              <h3 className="font-semibold mb-2 text-dark-foreground text-center">POS & Smart Tablets</h3>
-              <p className="text-sm text-dark-muted mb-4 text-center">Manage orders, invoices, and analytics seamlessly</p>
-              <a href="/pos-tablets">
-                <Button variant="dark" size="sm" className="w-full">
-                  Read More
-                </Button>
-              </a>
-            </div>
-
-            <div className="bg-dark/90 backdrop-blur-sm p-6 rounded-lg border border-dark/30 hover:shadow-dark transition-all duration-300 hover:scale-105">
-              <Users className="w-12 h-12 text-dark-accent mx-auto mb-4" />
-              <h3 className="font-semibold mb-2 text-dark-foreground text-center">White-Label Fulfillment</h3>
-              <p className="text-sm text-dark-muted mb-4 text-center">Production and delivery for digital food brands</p>
-              <a href="/white-label-fulfillment">
-                <Button variant="dark" size="sm" className="w-full">
-                  Read More
-                </Button>
-              </a>
+            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-border/20 hover:shadow-warm transition-all duration-300 hover:scale-105">
+              <Tablet className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold mb-2 text-center">Smart Analytics</h3>
+              <p className="text-sm text-muted-foreground text-center">Real-time insights and data-driven food operations</p>
             </div>
           </div>
         </div>

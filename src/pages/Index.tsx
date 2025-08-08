@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PlatformServices from "@/components/PlatformServices";
 import ForEmployees from "@/components/ForEmployees";
 import ForVendors from "@/components/ForVendors";
 import TrustedCustomers from "@/components/TrustedCustomers";
@@ -11,6 +12,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <PlatformServices />
       <TrustedCustomers />
       <ForEmployees />
       <ForVendors />

@@ -38,9 +38,23 @@ const Header = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
-                How It Works
-              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors font-medium flex items-center">
+                  How It Works
+                  <ChevronDown className="ml-1" size={16} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem>
+                    <a href="/how-it-works" className="w-full">Overview</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/how-it-works#employers" className="w-full">For Employers</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/how-it-works#employees" className="w-full">For Employees</a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us
               </a>
@@ -89,9 +103,20 @@ const Header = () => {
                   </a>
                 </div>
               </div>
-              <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
-                How It Works
-              </a>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-muted-foreground">How It Works</p>
+                <div className="pl-4 space-y-2">
+                  <a href="/how-it-works" className="block text-foreground hover:text-primary transition-colors">
+                    Overview
+                  </a>
+                  <a href="/how-it-works#employers" className="block text-foreground hover:text-primary transition-colors">
+                    For Employers
+                  </a>
+                  <a href="/how-it-works#employees" className="block text-foreground hover:text-primary transition-colors">
+                    For Employees
+                  </a>
+                </div>
+              </div>
               <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us
               </a>
