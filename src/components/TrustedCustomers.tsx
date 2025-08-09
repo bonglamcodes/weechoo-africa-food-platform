@@ -103,22 +103,6 @@ const TrustedCustomers = () => {
           </p>
         </div>
 
-        {/* Success Stats */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <Card key={index} className="border-border/20 bg-card/50 text-center hover:shadow-warm transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="mx-auto mb-4 w-16 h-16 bg-gradient-hero/10 rounded-full flex items-center justify-center">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-foreground mb-2">{stat.label}</div>
-                <div className="text-sm text-muted-foreground">{stat.description}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
         {/* Customer Carousel */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Companies We're Proud to Serve</h3>
@@ -181,14 +165,28 @@ const TrustedCustomers = () => {
         </div>
 
         {/* Testimonial Section */}
-        <div className="bg-gradient-warm rounded-2xl p-8 lg:p-12 text-center">
-          <div className="max-w-3xl mx-auto">
-            <blockquote className="text-2xl font-medium mb-6 text-foreground leading-relaxed">
-              "Weechoo has transformed how we handle workplace dining. Our employees love the variety and convenience, while our HR team appreciates the seamless administration."
-            </blockquote>
-            <div className="text-lg text-foreground">
-              <strong>Sarah Adebayo</strong>
-              <div className="text-muted-foreground">Head of Operations, Credit Mall Limited</div>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gradient-warm rounded-2xl p-8 lg:p-12 text-center">
+            <div className="max-w-3xl mx-auto">
+              <blockquote className="text-xl font-medium mb-6 text-foreground leading-relaxed">
+                "Weechoo has revolutionized our employee dining experience. The platform is intuitive, the food quality is exceptional, and our team productivity has noticeably improved."
+              </blockquote>
+              <div className="text-lg text-foreground">
+                <strong>Michael Osei</strong>
+                <div className="text-muted-foreground">CEO, Ascend Ghana</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-warm rounded-2xl p-8 lg:p-12 text-center">
+            <div className="max-w-3xl mx-auto">
+              <blockquote className="text-xl font-medium mb-6 text-foreground leading-relaxed">
+                "Weechoo has transformed how we handle workplace dining. Our employees love the variety and convenience, while our HR team appreciates the seamless administration."
+              </blockquote>
+              <div className="text-lg text-foreground">
+                <strong>Sarah Adebayo</strong>
+                <div className="text-muted-foreground">Head of Operations, Credit Mall Limited</div>
+              </div>
             </div>
           </div>
         </div>
