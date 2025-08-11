@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, MapPin, Truck, DollarSign, Shield, ChefHat, BarChart, ArrowRight } from "lucide-react";
 import vendorImage from "@/assets/professional-kitchen.jpg";
+import kitchenPartnersBanner from "@/assets/kitchen-partners-banner.jpg";
 
 const ForVendors = () => {
   const benefits = [
@@ -142,37 +143,38 @@ const ForVendors = () => {
           </div>
         </div>
 
-        {/* Onboarding Process */}
-        <div className="text-center mb-16">
-          <h3 className="text-3xl font-bold mb-12 text-foreground">Simple Onboarding Process</h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                1
+        {/* Who We Partner With */}
+        <div className="relative rounded-2xl overflow-hidden mb-16">
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent z-10"></div>
+          <img 
+            src={kitchenPartnersBanner} 
+            alt="Professional kitchen environment" 
+            className="w-full h-96 object-cover"
+          />
+          <div className="absolute inset-0 z-20 flex items-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-2xl">
+                <h3 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                  Who We Partner With
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-3 h-3 bg-primary rounded-full"></div>
+                    <p className="text-xl text-foreground font-medium">Restaurant Chains</p>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-3 h-3 bg-secondary rounded-full"></div>
+                    <p className="text-xl text-foreground font-medium">Local Restaurants</p>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-3 h-3 bg-accent rounded-full"></div>
+                    <p className="text-xl text-foreground font-medium">Food Entrepreneurs</p>
+                  </div>
+                </div>
+                <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
+                  From established restaurant chains to innovative food entrepreneurs, we provide the infrastructure and support needed to scale your culinary business across Africa.
+                </p>
               </div>
-              <h4 className="text-xl font-semibold mb-2">Apply Online</h4>
-              <p className="text-muted-foreground">Submit your application with sample menus and business details</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                2
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Kitchen Tour</h4>
-              <p className="text-muted-foreground">Visit our facilities and meet with our culinary team</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                3
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Quality Certification</h4>
-              <p className="text-muted-foreground">Complete food safety training and quality standards verification</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                4
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Launch & Grow</h4>
-              <p className="text-muted-foreground">Start serving corporate clients and scale your business</p>
             </div>
           </div>
         </div>
