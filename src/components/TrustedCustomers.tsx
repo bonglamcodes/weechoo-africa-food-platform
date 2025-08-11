@@ -172,8 +172,8 @@ const TrustedCustomers = () => {
                 "Weechoo has revolutionized our employee dining experience. The platform is intuitive, the food quality is exceptional, and our team productivity has noticeably improved."
               </blockquote>
               <div className="text-lg text-foreground">
-                <strong>Michael Osei</strong>
-                <div className="text-muted-foreground">CEO, Ascend Ghana</div>
+                <strong>John</strong>
+                <div className="text-muted-foreground">Operations Manager, Ascend Ghana</div>
               </div>
             </div>
           </div>
@@ -184,8 +184,8 @@ const TrustedCustomers = () => {
                 "Weechoo has transformed how we handle workplace dining. Our employees love the variety and convenience, while our HR team appreciates the seamless administration."
               </blockquote>
               <div className="text-lg text-foreground">
-                <strong>Sarah Adebayo</strong>
-                <div className="text-muted-foreground">Head of Operations, Credit Mall Limited</div>
+                <strong>Esther Lamptey</strong>
+                <div className="text-muted-foreground">HR, Pavelon</div>
               </div>
             </div>
           </div>

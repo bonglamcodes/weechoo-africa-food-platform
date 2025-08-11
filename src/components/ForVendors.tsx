@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, MapPin, Truck, DollarSign, Shield, ChefHat, BarChart, ArrowRight } from "lucide-react";
 import vendorImage from "@/assets/professional-kitchen.jpg";
-import kitchenPartnersBanner from "@/assets/kitchen-partners-banner.jpg";
+import modernKitchenPartners from "@/assets/modern-kitchen-partners.jpg";
 
 const ForVendors = () => {
   const benefits = [
@@ -144,35 +144,38 @@ const ForVendors = () => {
         </div>
 
         {/* Who We Partner With */}
-        <div className="relative rounded-2xl overflow-hidden mb-16">
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent z-10"></div>
+        <div className="relative rounded-3xl overflow-hidden mb-16 shadow-elegant">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent z-10"></div>
           <img 
-            src={kitchenPartnersBanner} 
-            alt="Professional kitchen environment" 
-            className="w-full h-96 object-cover"
+            src={modernKitchenPartners} 
+            alt="Modern professional kitchen with chefs working" 
+            className="w-full h-[500px] object-cover"
           />
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="container mx-auto px-4">
-              <div className="max-w-2xl">
-                <h3 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+              <div className="max-w-3xl">
+                <h3 className="text-5xl lg:text-6xl font-bold mb-8 text-white">
                   Who We Partner With
                 </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-primary rounded-full"></div>
-                    <p className="text-xl text-foreground font-medium">Restaurant Chains</p>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="w-4 h-4 bg-white rounded-full mb-3"></div>
+                    <p className="text-xl text-white font-semibold mb-2">Restaurant Chains</p>
+                    <p className="text-white/80 text-sm">Established brands looking to expand their reach</p>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-secondary rounded-full"></div>
-                    <p className="text-xl text-foreground font-medium">Local Restaurants</p>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="w-4 h-4 bg-secondary rounded-full mb-3"></div>
+                    <p className="text-xl text-white font-semibold mb-2">Local Restaurants</p>
+                    <p className="text-white/80 text-sm">Community favorites ready to scale operations</p>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-accent rounded-full"></div>
-                    <p className="text-xl text-foreground font-medium">Food Entrepreneurs</p>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="w-4 h-4 bg-accent rounded-full mb-3"></div>
+                    <p className="text-xl text-white font-semibold mb-2">Food Entrepreneurs</p>
+                    <p className="text-white/80 text-sm">Innovative chefs building the future of food</p>
                   </div>
                 </div>
-                <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
-                  From established restaurant chains to innovative food entrepreneurs, we provide the infrastructure and support needed to scale your culinary business across Africa.
+                <p className="text-xl text-white/90 leading-relaxed">
+                  From established restaurant chains to innovative food entrepreneurs, we provide world-class infrastructure and support to scale your culinary business across Africa.
                 </p>
               </div>
             </div>
