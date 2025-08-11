@@ -144,39 +144,48 @@ const ForVendors = () => {
         </div>
 
         {/* Who We Partner With */}
-        <div className="relative rounded-3xl overflow-hidden mb-16 shadow-elegant">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent z-10"></div>
-          <img 
-            src={modernKitchenPartners} 
-            alt="Modern professional kitchen with chefs working" 
-            className="w-full h-[500px] object-cover"
-          />
-          <div className="absolute inset-0 z-20 flex items-center">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl">
-                <h3 className="text-5xl lg:text-6xl font-bold mb-8 text-white">
-                  Who We Partner With
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <div className="w-4 h-4 bg-white rounded-full mb-3"></div>
-                    <p className="text-xl text-white font-semibold mb-2">Restaurant Chains</p>
-                    <p className="text-white/80 text-sm">Established brands looking to expand their reach</p>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <div className="w-4 h-4 bg-secondary rounded-full mb-3"></div>
-                    <p className="text-xl text-white font-semibold mb-2">Local Restaurants</p>
-                    <p className="text-white/80 text-sm">Community favorites ready to scale operations</p>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <div className="w-4 h-4 bg-accent rounded-full mb-3"></div>
-                    <p className="text-xl text-white font-semibold mb-2">Food Entrepreneurs</p>
-                    <p className="text-white/80 text-sm">Innovative chefs building the future of food</p>
-                  </div>
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+              Who We Partner With
+            </h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              From established restaurant chains to innovative food entrepreneurs, we provide world-class infrastructure and support to scale your culinary business across Africa.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img 
+                src={modernKitchenPartners} 
+                alt="Modern professional kitchen with chefs working" 
+                className="rounded-2xl shadow-warm w-full h-80 object-cover"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-card/50 rounded-xl p-6 border border-border/20 hover:shadow-warm transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-3">
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
+                  <h4 className="text-xl font-semibold text-foreground">Restaurant Chains</h4>
                 </div>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  From established restaurant chains to innovative food entrepreneurs, we provide world-class infrastructure and support to scale your culinary business across Africa.
-                </p>
+                <p className="text-muted-foreground">Established brands looking to expand their reach and scale operations across multiple locations.</p>
+              </div>
+              
+              <div className="bg-card/50 rounded-xl p-6 border border-border/20 hover:shadow-warm transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-3">
+                  <div className="w-3 h-3 bg-secondary rounded-full"></div>
+                  <h4 className="text-xl font-semibold text-foreground">Local Restaurants</h4>
+                </div>
+                <p className="text-muted-foreground">Community favorites ready to scale operations and reach corporate clients efficiently.</p>
+              </div>
+              
+              <div className="bg-card/50 rounded-xl p-6 border border-border/20 hover:shadow-warm transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-3">
+                  <div className="w-3 h-3 bg-accent rounded-full"></div>
+                  <h4 className="text-xl font-semibold text-foreground">Food Entrepreneurs</h4>
+                </div>
+                <p className="text-muted-foreground">Innovative chefs and culinary entrepreneurs building the future of African cuisine.</p>
               </div>
             </div>
           </div>
