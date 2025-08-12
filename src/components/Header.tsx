@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import weechooLogo from "@/assets/weechoo-logo.png";
+import weechooLogo from "@/assets/weechoo.jpeg";
 import {
   DropdownMenu,
   DropdownMenuContent,

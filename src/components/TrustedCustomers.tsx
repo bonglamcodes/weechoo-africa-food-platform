@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Building2, Users, Star, Award, MapPin } from "lucide-react";
-import pavelonLogo from "@/assets/pavelon-logo.png";
-import ascendLogo from "@/assets/ascend-logo.png";
-import boseaLogo from "@/assets/bosea-logo.png";
-import creditmallLogo from "@/assets/creditmall-logo.png";
+import pavelonLogo from "@/assets/pavelon.png";
+import ascendLogo from "@/assets/ascend.png";
+import boseaLogo from "@/assets/bosea.jpg";
+import creditmallLogo from "@/assets/cml.png";
 
 const TrustedCustomers = () => {
   const customers = [

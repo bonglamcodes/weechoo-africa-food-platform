@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import weechooLogo from "@/assets/weechoo.jpeg";
 
 const Footer = () => {
   return (
@@ -9,8 +10,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-hero rounded-md"></div>
-              <span className="text-2xl font-bold">Weechoo</span>
+             
+              <img src={weechooLogo} alt="Weechoo Logo" className="h-12 rounded-sm w-auto" />
             </div>
             <p className="text-background/80">
               Building Africa's premier cloud kitchen and institutional food infrastructure platform.
