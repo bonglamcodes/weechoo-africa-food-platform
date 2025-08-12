@@ -40,6 +40,69 @@ const KitchenService = () => {
           </div>
         </div>
 
+        <div className="bg-gradient-warm p-8 rounded-lg mb-16">
+          <h2 className="text-2xl font-bold mb-4">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3">
+                1
+              </div>
+              <h3 className="font-semibold mb-2">Book Your Slot</h3>
+              <p className="text-sm text-muted-foreground">Reserve kitchen time through our easy booking system</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3">
+                2
+              </div>
+              <h3 className="font-semibold mb-2">Cook & Prep</h3>
+              <p className="text-sm text-muted-foreground">Access fully equipped commercial kitchens</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3">
+                3
+              </div>
+              <h3 className="font-semibold mb-2">Scale Your Business</h3>
+              <p className="text-sm text-muted-foreground">Grow without the overhead of owning a kitchen</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Pricing</h2>
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4">
+                <h3 className="font-semibold">Hourly Rate</h3>
+                <p className="text-2xl font-bold text-primary">GHS 50/hour</p>
+                <p className="text-sm text-muted-foreground">Perfect for testing recipes or small batches</p>
+              </div>
+              <div className="border rounded-lg p-4">
+                <h3 className="font-semibold">Daily Rate</h3>
+                <p className="text-2xl font-bold text-primary">GHS 300/day</p>
+                <p className="text-sm text-muted-foreground">Ideal for regular production schedules</p>
+              </div>
+              <div className="border rounded-lg p-4 border-primary">
+                <h3 className="font-semibold">Monthly Membership</h3>
+                <p className="text-2xl font-bold text-primary">GHS 2,500/month</p>
+                <p className="text-sm text-muted-foreground">Best value for growing food businesses</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Included Equipment</h2>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Commercial-grade ovens and stoves</li>
+              <li>• Industrial mixers and food processors</li>
+              <li>• Refrigeration and freezer units</li>
+              <li>• Food prep stations and cutting boards</li>
+              <li>• Packaging and labeling equipment</li>
+              <li>• Cleaning and sanitation supplies</li>
+              <li>• Storage space for ingredients</li>
+              <li>• WiFi and office facilities</li>
+            </ul>
+          </div>
+        </div>
+
         <div className="text-center">
           <Button variant="hero" size="xl">
             Join Waitlist

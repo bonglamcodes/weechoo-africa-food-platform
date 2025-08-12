@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import weechooLogo from "@/assets/weechoo-logo.png";
 import {
   DropdownMenu,
@@ -67,12 +68,16 @@ const Header = () => {
               Tour our Kitchen
             </a>
             <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button variant="default" size="sm">
-              Get Started
-            </Button>
+            <Link to="/sign-in">
+              <Button variant="ghost" size="sm">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/institution-onboarding">
+              <Button variant="default" size="sm">
+                Get Started
+              </Button>
+            </Link>
             </div>
           </div>
 
