@@ -49,10 +49,10 @@ const ForEmployees = () => {
               <h2 className="text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">Employee Portal</span>
                 <br />
-                <span className="text-foreground">Made Simple</span>
+                <span className="text-foreground">Simplified</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                A beautiful, intuitive platform that makes meal ordering effortless. Your employees will love the seamless experience.
+                An elegant, easy-to-use platform that turns meal ordering into a delight. Your team will enjoy a smooth, stress-free experience—every single time.
               </p>
             </div>
           </div>

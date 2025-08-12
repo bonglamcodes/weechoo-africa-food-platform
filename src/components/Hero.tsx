@@ -29,11 +29,11 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl lg:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-            Restaurants reimagined. Building the food infrastructure for Africa.
+            Restaurants, reimagined. We're building the food infrastructure Africa deserves—serving everything from corporate lunch solutions to a thriving cloud kitchen ecosystem.
           </p>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            From corporate lunch solutions to cloud kitchen ecosystem - we're transforming how institutions and food vendors connect across the continent.
+            We're transforming how institutions and food vendors connect, collaborate, and thrive across the continent.
           </p>
 
 
