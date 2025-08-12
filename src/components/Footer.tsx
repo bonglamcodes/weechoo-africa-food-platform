@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
              
-              <img src={weechooLogo} alt="Weechoo Logo" className="h-12 rounded-sm w-auto" />
+              <img src={weechooLogo} alt="Weechoo Logo" className="h-10 rounded-sm w-auto" />
             </div>
             <p className="text-background/80">
               Building Africa's premier cloud kitchen and institutional food infrastructure platform.
