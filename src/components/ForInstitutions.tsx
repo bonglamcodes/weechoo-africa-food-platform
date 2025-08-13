@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, Users, CreditCard, BarChart3, Heart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import officeImage from "@/assets/office-workers-lunch.jpg";
 
 const ForInstitutions = () => {
@@ -51,10 +52,12 @@ const ForInstitutions = () => {
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Transform your employee meal program with our comprehensive corporate food solutions. From setup to daily delivery, we handle everything.
               </p>
-              <Button variant="hero" size="lg">
-                Get Started Today
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
+              <Link to="/institution-onboarding">
+                <Button variant="hero" size="lg">
+                  Join as Institution
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
+              </Link>
             </div>
             <div className="relative">
               <img 
@@ -127,9 +130,11 @@ const ForInstitutions = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="xl">
-            Sign Up for Institution Service
-          </Button>
+          <Link to="/institution-onboarding">
+            <Button variant="hero" size="xl">
+              Sign Up for Institution Service
+            </Button>
+          </Link>
           <p className="text-sm text-muted-foreground mt-4">No setup fees • Cancel anytime • 30-day trial</p>
         </div>
       </div>

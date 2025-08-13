@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Calendar, Star, Shield, CheckCircle, Smartphone, Bell, CreditCard } from "lucide-react";
+import { Link } from "react-router-dom";
 import officeLunchImage from "@/assets/office-lunch.jpg";
 
 const ForEmployees = () => {
@@ -100,10 +101,12 @@ const ForEmployees = () => {
                   </div>
                 </div>
 
-                <Button variant="hero" size="lg" className="group">
-                  View Portal Demo
-                  <Smartphone className="ml-2 group-hover:rotate-12 transition-transform" size={20} />
-                </Button>
+                <Link to="/book-demo">
+                  <Button variant="hero" size="lg" className="group">
+                    View Portal Demo
+                    <Smartphone className="ml-2 group-hover:rotate-12 transition-transform" size={20} />
+                  </Button>
+                </Link>
               </div>
 
               <div className="relative">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, MapPin, Truck, DollarSign, Shield, ChefHat, BarChart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import vendorImage from "@/assets/professional-kitchen.jpg";
 import modernKitchenPartners from "@/assets/modern-kitchen-partners.jpg";
 
@@ -59,10 +60,12 @@ const ForVendors = () => {
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Join Africa's fastest-growing cloud kitchen ecosystem. Access thousands of corporate clients, world-class infrastructure, and the tools you need to scale.
               </p>
-              <Button variant="secondary" size="lg">
-                Join Our Ecosystem
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
+              <Link to="/vendor-onboarding">
+                <Button variant="secondary" size="lg">
+                  Join Our Ecosystem
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -192,9 +195,11 @@ const ForVendors = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="xl">
-            Join as Vendor
-          </Button>
+          <Link to="/vendor-onboarding">
+            <Button variant="hero" size="xl">
+              Join as Vendor
+            </Button>
+          </Link>
           <p className="text-sm text-muted-foreground mt-4">Application review in 3-5 business days • No upfront costs</p>
         </div>
       </div>
