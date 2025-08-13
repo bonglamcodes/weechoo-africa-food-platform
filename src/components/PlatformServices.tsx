@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Users, ChefHat, Building2, Tablet } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PlatformServices = () => {
   return (
@@ -19,9 +20,11 @@ const PlatformServices = () => {
             <ChefHat className="w-12 h-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2 text-center">Food Vendors</h3>
             <p className="text-sm text-muted-foreground mb-4 text-center">Join our ecosystem and reach thousands of companies</p>
-            <Button variant="accent" size="sm" className="w-full">
-              Join as Vendor
-            </Button>
+            <Link to="/vendor-onboarding">
+              <Button variant="accent" size="sm" className="w-full">
+                Join as Vendor
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border border-border/20 hover:shadow-warm transition-all duration-300 hover:scale-105">

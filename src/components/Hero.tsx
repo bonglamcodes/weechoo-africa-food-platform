@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, ChefHat, Building2, Tablet } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/african-dishes-hero.jpg";
 
 const Hero = () => {
@@ -39,10 +40,12 @@ const Hero = () => {
 
           {/* Primary CTA */}
           <div className="mb-16">
-            <Button variant="hero" size="xl" className="animate-pulse-glow">
-              Join as Institution
-              <ArrowRight className="ml-2" size={24} />
-            </Button>
+            <Link to="/institution-onboarding">
+              <Button variant="hero" size="xl" className="animate-pulse-glow">
+                Join as Institution
+                <ArrowRight className="ml-2" size={24} />
+              </Button>
+            </Link>
           </div>
 
           {/* Key Features Grid */}

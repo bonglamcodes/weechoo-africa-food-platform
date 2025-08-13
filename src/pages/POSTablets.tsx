@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import posSystemImage from "@/assets/pos-system-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { Tablet, BarChart3, CreditCard, Smartphone } from "lucide-react";
 

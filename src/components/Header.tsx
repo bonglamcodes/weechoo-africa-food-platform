@@ -18,7 +18,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
-            <img src={weechooLogo} alt="Weechoo" className="h-8 w-auto" />
+            <Link to="/">
+              <img src={weechooLogo} alt="Weechoo" className="h-8 w-auto" />
+            </Link>
             
             {/* Left side navigation */}
             <div className="hidden md:flex items-center space-x-6">
@@ -29,13 +31,13 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
-                    <a href="#institutions" className="w-full">For Institutions</a>
+                    <Link to="/institution-onboarding" className="w-full">For Institutions</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#vendors" className="w-full">For Vendors</a>
+                    <Link to="/vendor-onboarding" className="w-full">For Vendors</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#employees" className="w-full">Employee Portal</a>
+                    <Link to="/book-demo" className="w-full">Employee Portal</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -56,17 +58,17 @@ const Header = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us
-              </a>
+              </Link>
             </div>
           </div>
           
           {/* Right side navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#customers" className="text-foreground hover:text-primary transition-colors font-medium">
-              Tour our Kitchen
-            </a>
+            <Link to="/book-demo" className="text-foreground hover:text-primary transition-colors font-medium">
+              Book a Demo
+            </Link>
             <div className="flex items-center space-x-4">
             <Link to="/sign-in">
               <Button variant="ghost" size="sm">

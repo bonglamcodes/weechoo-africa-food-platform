@@ -12,6 +12,7 @@ import InstitutionOnboarding from "./pages/InstitutionOnboarding";
 import VendorOnboarding from "./pages/VendorOnboarding";
 import SignIn from "./pages/SignIn";
 import BookDemo from "./pages/BookDemo";
+import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/vendor-onboarding" element={<VendorOnboarding />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/book-demo" element={<BookDemo />} />
+          <Route path="/about" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
