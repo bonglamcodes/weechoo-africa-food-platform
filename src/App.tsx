@@ -13,6 +13,10 @@ import VendorOnboarding from "./pages/VendorOnboarding";
 import SignIn from "./pages/SignIn";
 import BookDemo from "./pages/BookDemo";
 import AboutUs from "./pages/AboutUs";
+import EmployeeDashboard from "./pages/EmployeeDashboard";
+import EmployeeMenu from "./pages/EmployeeMenu";
+import EmployeeOrderTracking from "./pages/EmployeeOrderTracking";
+import EmployerDashboard from "./pages/EmployerDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +38,10 @@ const App = () => (
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/book-demo" element={<BookDemo />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+          <Route path="/employee-menu" element={<EmployeeMenu />} />
+          <Route path="/employee-tracking" element={<EmployeeOrderTracking />} />
+          <Route path="/employer-dashboard" element={<EmployerDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
