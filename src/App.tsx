@@ -17,6 +17,7 @@ import EmployeeDashboard from "./pages/EmployeeDashboard";
 import EmployeeMenu from "./pages/EmployeeMenu";
 import EmployeeOrderTracking from "./pages/EmployeeOrderTracking";
 import EmployerDashboard from "./pages/EmployerDashboard";
+import MockupGallery from "./pages/MockupGallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/employee-menu" element={<EmployeeMenu />} />
           <Route path="/employee-tracking" element={<EmployeeOrderTracking />} />
           <Route path="/employer-dashboard" element={<EmployerDashboard />} />
+          <Route path="/mockups" element={<MockupGallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
