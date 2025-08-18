@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import weechooLogo from "@/assets/weechoo.jpeg";
 
 const Footer = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
               Building Africa's premier cloud kitchen and institutional food infrastructure platform.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/weechoo/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="#" className="text-background/60 hover:text-primary transition-colors">
@@ -33,11 +34,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#institutions" className="text-background/80 hover:text-primary transition-colors">For Institutions</a></li>
-              <li><a href="#vendors" className="text-background/80 hover:text-primary transition-colors">For Vendors</a></li>
-              <li><a href="#employees" className="text-background/80 hover:text-primary transition-colors">Employee Portal</a></li>
-              <li><a href="#platform" className="text-background/80 hover:text-primary transition-colors">Platform & Tech</a></li>
-              <li><a href="#about" className="text-background/80 hover:text-primary transition-colors">About Us</a></li>
+              <li><Link to="/institution-onboarding" className="text-background/80 hover:text-primary transition-colors">For Institutions</Link></li>
+              <li><Link to="/vendor-onboarding" className="text-background/80 hover:text-primary transition-colors">For Vendors</Link></li>
+              <li><Link to="/employee-dashboard" className="text-background/80 hover:text-primary transition-colors">Employee Portal</Link></li>
+              <li><Link to="/how-it-works" className="text-background/80 hover:text-primary transition-colors">Platform & Tech</Link></li>
+              <li><Link to="/about" className="text-background/80 hover:text-primary transition-colors">About Us</Link></li>
             </ul>
           </div>
 
@@ -45,11 +46,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2">
-              <li><span className="text-background/80">Corporate Meal Programs</span></li>
-              <li><span className="text-background/80">Cloud Kitchen Infrastructure</span></li>
-              <li><span className="text-background/80">Kitchen-as-a-Service <em className="text-background/60">(Coming Soon)</em></span></li>
-              <li><span className="text-background/80">White-Label Fulfillment <em className="text-background/60">(Coming Soon)</em></span></li>
-              <li><span className="text-background/80">POS & Smart Tablets <em className="text-background/60">(Coming Soon)</em></span></li>
+              <li><Link to="/institution-onboarding" className="text-background/80 hover:text-primary transition-colors">Corporate Meal Programs</Link></li>
+              <li><Link to="/vendor-onboarding" className="text-background/80 hover:text-primary transition-colors">Cloud Kitchen Infrastructure</Link></li>
+              <li><Link to="/kitchen-service" className="text-background/80 hover:text-primary transition-colors">Kitchen-as-a-Service <em className="text-background/60">(Coming Soon)</em></Link></li>
+              <li><Link to="/white-label-fulfillment" className="text-background/80 hover:text-primary transition-colors">White-Label Fulfillment <em className="text-background/60">(Coming Soon)</em></Link></li>
+              <li><Link to="/pos-tablets" className="text-background/80 hover:text-primary transition-colors">POS & Smart Tablets <em className="text-background/60">(Coming Soon)</em></Link></li>
             </ul>
           </div>
 
@@ -71,9 +72,11 @@ const Footer = () => {
               </div>
             </div>
             <div className="pt-4">
-              <Button variant="default" size="sm">
-                Get Started Today
-              </Button>
+              <Link to="/institution-onboarding">
+                <Button variant="default" size="sm">
+                  Get Started Today
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
