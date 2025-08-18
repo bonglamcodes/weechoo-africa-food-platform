@@ -67,34 +67,16 @@ const KitchenService = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Pricing</h2>
-            <div className="space-y-4">
-              <div className="border rounded-lg p-4">
-                <h3 className="font-semibold">Hourly Rate</h3>
-                <p className="text-2xl font-bold text-primary">GHS 50/hour</p>
-                <p className="text-sm text-muted-foreground">Perfect for testing recipes or small batches</p>
-              </div>
-              <div className="border rounded-lg p-4">
-                <h3 className="font-semibold">Daily Rate</h3>
-                <p className="text-2xl font-bold text-primary">GHS 300/day</p>
-                <p className="text-sm text-muted-foreground">Ideal for regular production schedules</p>
-              </div>
-              <div className="border rounded-lg p-4 border-primary">
-                <h3 className="font-semibold">Monthly Membership</h3>
-                <p className="text-2xl font-bold text-primary">GHS 2,500/month</p>
-                <p className="text-sm text-muted-foreground">Best value for growing food businesses</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Included Equipment</h2>
+        <div className="bg-card p-8 rounded-lg mb-16">
+          <h2 className="text-2xl font-bold mb-4">Included Equipment</h2>
+          <div className="grid md:grid-cols-2 gap-8">
             <ul className="space-y-2 text-muted-foreground">
               <li>• Commercial-grade ovens and stoves</li>
               <li>• Industrial mixers and food processors</li>
               <li>• Refrigeration and freezer units</li>
               <li>• Food prep stations and cutting boards</li>
+            </ul>
+            <ul className="space-y-2 text-muted-foreground">
               <li>• Packaging and labeling equipment</li>
               <li>• Cleaning and sanitation supplies</li>
               <li>• Storage space for ingredients</li>

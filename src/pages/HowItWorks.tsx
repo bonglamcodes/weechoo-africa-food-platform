@@ -115,7 +115,7 @@ const HowItWorks = () => {
                   Transform your employee meal program with our seamless onboarding process. From Excel upload to daily deliveries, we handle everything.
                 </p>
                 <Button variant="hero" size="lg">
-                  Start Free Trial
+                  Sign Up
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </div>

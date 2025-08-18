@@ -79,58 +79,6 @@ const POSTablets = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-4">Starter Package</h3>
-            <div className="border rounded-lg p-6">
-              <p className="text-3xl font-bold text-primary mb-2">GHS 2,500</p>
-              <p className="text-sm text-muted-foreground mb-4">One-time purchase</p>
-              <ul className="text-sm space-y-2 mb-6">
-                <li>• 1 POS Tablet</li>
-                <li>• Receipt Printer</li>
-                <li>• Basic Support</li>
-                <li>• Setup & Training</li>
-              </ul>
-              <Button variant="outline" className="w-full">
-                Get Started
-              </Button>
-            </div>
-          </div>
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-4">Business Package</h3>
-            <div className="border-2 border-primary rounded-lg p-6">
-              <p className="text-3xl font-bold text-primary mb-2">GHS 4,800</p>
-              <p className="text-sm text-muted-foreground mb-4">One-time purchase</p>
-              <ul className="text-sm space-y-2 mb-6">
-                <li>• 2 POS Tablets</li>
-                <li>• Receipt Printer</li>
-                <li>• Card Payment Terminal</li>
-                <li>• Premium Support</li>
-                <li>• Advanced Analytics</li>
-              </ul>
-              <Button variant="hero" className="w-full">
-                Most Popular
-              </Button>
-            </div>
-          </div>
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-4">Enterprise Package</h3>
-            <div className="border rounded-lg p-6">
-              <p className="text-3xl font-bold text-primary mb-2">Custom</p>
-              <p className="text-sm text-muted-foreground mb-4">Contact for pricing</p>
-              <ul className="text-sm space-y-2 mb-6">
-                <li>• Multiple POS Tablets</li>
-                <li>• Full Hardware Suite</li>
-                <li>• White-label Options</li>
-                <li>• 24/7 Support</li>
-                <li>• Custom Integration</li>
-              </ul>
-              <Button variant="outline" className="w-full">
-                Contact Sales
-              </Button>
-            </div>
-          </div>
-        </div>
 
         <div className="text-center">
           <Button variant="hero" size="xl">
