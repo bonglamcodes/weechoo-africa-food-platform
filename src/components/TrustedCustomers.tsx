@@ -38,22 +38,6 @@ const TrustedCustomers = () => {
       employees: "300+",
       description: "Manufacturing leader providing quality meals to workforce through Weechoo",
       logo: boseaLogo
-    },
-    {
-      name: "DataFlow Systems", 
-      industry: "IT Services",
-      location: "Abuja, Nigeria",
-      employees: "250+",
-      description: "Leading IT services provider optimizing operations with Weechoo's platform",
-      logo: "DS"
-    },
-    {
-      name: "GreenTech Solutions",
-      industry: "Clean Energy", 
-      location: "Cape Town, South Africa",
-      employees: "180+",
-      description: "Sustainable energy company fueling teams with Weechoo's eco-friendly approach",
-      logo: "GT"
     }
   ];
 
@@ -102,57 +86,49 @@ const TrustedCustomers = () => {
         </div>
 
         {/* Auto-scrolling Customer Logos */}
-        <div className="mb-16 overflow-hidden">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Companies We're Proud to Serve</h3>
+        <div className="mb-20 overflow-hidden">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-16 text-foreground">Companies We're Proud to Serve</h3>
           
           <div className="relative">
-            <div className="flex animate-scroll">
+            {/* Gradient fade effects for seamless appearance */}
+            <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
+            
+            <div className="flex animate-scroll gap-12 md:gap-16">
               {/* First set of logos */}
               {customers.map((customer, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0 mx-8">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-2 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
-                    {customer.logo.length <= 2 ? (
-                      <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-                        {customer.logo}
-                      </div>
-                    ) : (
-                      <img 
-                        src={customer.logo} 
-                        alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain"
-                        onError={(e) => {
-                          console.log(`Failed to load image: ${customer.logo}`);
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
-                    )}
+                <div key={`first-${index}`} className="flex-shrink-0">
+                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-white rounded-2xl flex items-center justify-center p-1 shadow-elegant hover:shadow-warm transition-all duration-300 border border-border/10 hover:scale-105">
+                    <img 
+                      src={customer.logo} 
+                      alt={`${customer.name} logo`} 
+                      className="w-full h-full object-contain p-1"
+                      onError={(e) => {
+                        console.log(`Failed to load image: ${customer.logo}`);
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
                   </div>
-                  <p className="text-center mt-3 text-sm font-medium text-muted-foreground truncate">
+                  <p className="text-center mt-4 text-xs md:text-sm font-medium text-muted-foreground truncate max-w-[80px] md:max-w-[112px] lg:max-w-[128px]">
                     {customer.name}
                   </p>
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
               {customers.map((customer, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0 mx-8">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-2 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
-                    {customer.logo.length <= 2 ? (
-                      <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-                        {customer.logo}
-                      </div>
-                    ) : (
-                      <img 
-                        src={customer.logo} 
-                        alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain"
-                        onError={(e) => {
-                          console.log(`Failed to load image: ${customer.logo}`);
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
-                    )}
+                <div key={`second-${index}`} className="flex-shrink-0">
+                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-white rounded-2xl flex items-center justify-center p-1 shadow-elegant hover:shadow-warm transition-all duration-300 border border-border/10 hover:scale-105">
+                    <img 
+                      src={customer.logo} 
+                      alt={`${customer.name} logo`} 
+                      className="w-full h-full object-contain p-1"
+                      onError={(e) => {
+                        console.log(`Failed to load image: ${customer.logo}`);
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
                   </div>
-                  <p className="text-center mt-3 text-sm font-medium text-muted-foreground truncate">
+                  <p className="text-center mt-4 text-xs md:text-sm font-medium text-muted-foreground truncate max-w-[80px] md:max-w-[112px] lg:max-w-[128px]">
                     {customer.name}
                   </p>
                 </div>
