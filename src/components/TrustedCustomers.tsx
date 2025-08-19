@@ -128,28 +128,68 @@ const TrustedCustomers = () => {
           </div>
         </div>
 
-        {/* Testimonial Section */}
+        {/* Modern Testimonial Section */}
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-warm rounded-2xl p-8 lg:p-12 text-center">
+          <div className="group bg-gradient-warm rounded-3xl p-8 lg:p-12 text-center hover:shadow-glow transition-all duration-500 hover:scale-[1.02]">
             <div className="max-w-3xl mx-auto">
-              <blockquote className="text-xl font-medium mb-6 text-foreground leading-relaxed">
+              {/* Star Rating */}
+              <div className="flex justify-center mb-6 gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className="w-6 h-6 text-accent fill-accent animate-pulse-glow" 
+                    style={{
+                      animationDelay: `${i * 0.1}s`
+                    }}
+                  />
+                ))}
+              </div>
+              
+              <blockquote className="text-xl font-medium mb-8 text-foreground leading-relaxed group-hover:text-primary transition-colors duration-300">
                 "Weechoo has revolutionized our employee dining experience. The platform is intuitive, the food quality is exceptional, and our team productivity has noticeably improved."
               </blockquote>
-              <div className="text-lg text-foreground">
-                <strong>John</strong>
-                <div className="text-muted-foreground">Operations Manager, Ascend Ghana</div>
+              
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <div className="text-lg font-semibold text-foreground">John</div>
+                  <div className="text-muted-foreground text-sm">Operations Manager</div>
+                  <div className="text-accent text-sm font-medium">Ascend Ghana</div>
+                </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-gradient-warm rounded-2xl p-8 lg:p-12 text-center">
+          <div className="group bg-gradient-warm rounded-3xl p-8 lg:p-12 text-center hover:shadow-glow transition-all duration-500 hover:scale-[1.02]">
             <div className="max-w-3xl mx-auto">
-              <blockquote className="text-xl font-medium mb-6 text-foreground leading-relaxed">
+              {/* Star Rating */}
+              <div className="flex justify-center mb-6 gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className="w-6 h-6 text-accent fill-accent animate-pulse-glow" 
+                    style={{
+                      animationDelay: `${i * 0.1 + 0.2}s`
+                    }}
+                  />
+                ))}
+              </div>
+              
+              <blockquote className="text-xl font-medium mb-8 text-foreground leading-relaxed group-hover:text-primary transition-colors duration-300">
                 "Weechoo has transformed how we handle workplace dining. Our employees love the variety and convenience, while our HR team appreciates the seamless administration."
               </blockquote>
-              <div className="text-lg text-foreground">
-                <strong>Esther Lamptey</strong>
-                <div className="text-muted-foreground">HR, Pavelon</div>
+              
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center group-hover:bg-secondary/30 transition-colors duration-300">
+                  <Building2 className="w-6 h-6 text-secondary" />
+                </div>
+                <div className="text-left">
+                  <div className="text-lg font-semibold text-foreground">Esther Lamptey</div>
+                  <div className="text-muted-foreground text-sm">Human Resources</div>
+                  <div className="text-secondary text-sm font-medium">Pavelon Technologies</div>
+                </div>
               </div>
             </div>
           </div>
