@@ -119,7 +119,7 @@ const TrustedCustomers = () => {
                       <img 
                         src={customer.logo} 
                         alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain filter brightness-0 contrast-100"
+                        className="w-full h-full object-contain"
                         onError={(e) => {
                           console.log(`Failed to load image: ${customer.logo}`);
                           e.currentTarget.style.display = 'none';
@@ -144,7 +144,7 @@ const TrustedCustomers = () => {
                       <img 
                         src={customer.logo} 
                         alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain filter brightness-0 contrast-100"
+                        className="w-full h-full object-contain"
                         onError={(e) => {
                           console.log(`Failed to load image: ${customer.logo}`);
                           e.currentTarget.style.display = 'none';
