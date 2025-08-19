@@ -110,7 +110,7 @@ const TrustedCustomers = () => {
               {/* First set of logos */}
               {customers.map((customer, index) => (
                 <div key={`first-${index}`} className="flex-shrink-0 mx-8">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-4 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-2 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
                     {typeof customer.logo === 'string' ? (
                       <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
                         {customer.logo}
@@ -119,7 +119,11 @@ const TrustedCustomers = () => {
                       <img 
                         src={customer.logo} 
                         alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain filter brightness-0 contrast-100"
+                        onError={(e) => {
+                          console.log(`Failed to load image: ${customer.logo}`);
+                          e.currentTarget.style.display = 'none';
+                        }}
                       />
                     )}
                   </div>
@@ -131,7 +135,7 @@ const TrustedCustomers = () => {
               {/* Duplicate set for seamless loop */}
               {customers.map((customer, index) => (
                 <div key={`second-${index}`} className="flex-shrink-0 mx-8">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-4 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-2 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
                     {typeof customer.logo === 'string' ? (
                       <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
                         {customer.logo}
@@ -140,7 +144,11 @@ const TrustedCustomers = () => {
                       <img 
                         src={customer.logo} 
                         alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain filter brightness-0 contrast-100"
+                        onError={(e) => {
+                          console.log(`Failed to load image: ${customer.logo}`);
+                          e.currentTarget.style.display = 'none';
+                        }}
                       />
                     )}
                   </div>
