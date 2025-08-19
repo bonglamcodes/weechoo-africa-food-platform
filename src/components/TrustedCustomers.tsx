@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { Building2, Users, Star, Award, MapPin } from "lucide-react";
 import pavelonLogo from "@/assets/pavelon.png";
 import ascendLogo from "@/assets/ascend.png";
-import boseaLogo from "@/assets/bosea.jpg";
 import creditmallLogo from "@/assets/cml.png";
 
 const TrustedCustomers = () => {
@@ -30,15 +29,13 @@ const TrustedCustomers = () => {
       employees: "150+", 
       description: "Innovative software company enhancing employee experience with Weechoo",
       logo: pavelonLogo
-    },
-    {
-      name: "Bosea Ghana",
-      industry: "Manufacturing",
-      location: "Kumasi, Ghana",
-      employees: "300+",
-      description: "Manufacturing leader providing quality meals to workforce through Weechoo",
-      logo: boseaLogo
     }
+  ];
+
+  // Create duplicated array for natural spacing
+  const duplicatedCustomers = [
+    ...customers,
+    ...customers,
   ];
 
   const stats = [
@@ -94,10 +91,10 @@ const TrustedCustomers = () => {
             <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
             <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-background via-background/80 to-transparent z-10"></div>
             
-            <div className="flex animate-scroll gap-16 md:gap-20 lg:gap-24">
-              {/* First set of logos */}
-              {customers.map((customer, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center">
+            <div className="flex animate-scroll gap-24 md:gap-32 lg:gap-40">
+              {/* Use duplicated customers for natural spacing */}
+              {duplicatedCustomers.map((customer, index) => (
+                <div key={`logo-${index}`} className="flex-shrink-0 flex items-center justify-center">
                   <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
@@ -111,25 +108,9 @@ const TrustedCustomers = () => {
                   </div>
                 </div>
               ))}
-              {/* Second set for seamless loop */}
-              {customers.map((customer, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center">
-                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
-                    <img 
-                      src={customer.logo} 
-                      alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transition-transform scale-125"
-                      onError={(e) => {
-                        console.log(`Failed to load image: ${customer.logo}`);
-                        e.currentTarget.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-              {/* Third set to ensure truly seamless infinite loop */}
-              {customers.map((customer, index) => (
-                <div key={`third-${index}`} className="flex-shrink-0 flex items-center justify-center">
+              {/* Additional set for seamless infinite loop */}
+              {duplicatedCustomers.map((customer, index) => (
+                <div key={`loop-${index}`} className="flex-shrink-0 flex items-center justify-center">
                   <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
