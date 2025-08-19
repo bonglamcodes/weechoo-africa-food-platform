@@ -126,7 +126,7 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'scroll': 'scroll 20s linear infinite',
-				'scroll-fast': 'scroll-fast 12s linear infinite'
+				'scroll-fast': 'scroll-fast 6s linear infinite'
 			}
 		}
 	},
