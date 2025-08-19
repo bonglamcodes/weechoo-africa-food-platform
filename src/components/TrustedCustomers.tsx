@@ -32,8 +32,9 @@ const TrustedCustomers = () => {
     }
   ];
 
-  // Create duplicated array for natural spacing
+  // Create enough duplicates for seamless infinite loop
   const duplicatedCustomers = [
+    ...customers,
     ...customers,
     ...customers,
   ];
@@ -92,25 +93,9 @@ const TrustedCustomers = () => {
             <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-background via-background/80 to-transparent z-10"></div>
             
             <div className="flex animate-scroll-fast md:animate-scroll gap-6 md:gap-12 lg:gap-16">
-              {/* Use duplicated customers for natural spacing */}
+              {/* Seamless infinite loop - render duplicated customers */}
               {duplicatedCustomers.map((customer, index) => (
-                <div key={`logo-${index}`} className="flex-shrink-0 flex items-center justify-center">
-                  <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center group md:bg-white/60 md:backdrop-blur-sm md:rounded-2xl md:border md:border-border/10 md:shadow-sm hover:md:shadow-md transition-all duration-300">
-                    <img 
-                      src={customer.logo} 
-                      alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain p-1 md:p-3 group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        console.log(`Failed to load image: ${customer.logo}`);
-                        e.currentTarget.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-              {/* Additional set for seamless infinite loop */}
-              {duplicatedCustomers.map((customer, index) => (
-                <div key={`loop-${index}`} className="flex-shrink-0 flex items-center justify-center">
+                <div key={`seamless-${index}`} className="flex-shrink-0 flex items-center justify-center">
                   <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center group md:bg-white/60 md:backdrop-blur-sm md:rounded-2xl md:border md:border-border/10 md:shadow-sm hover:md:shadow-md transition-all duration-300">
                     <img 
                       src={customer.logo} 
