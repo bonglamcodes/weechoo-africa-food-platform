@@ -114,6 +114,10 @@ export default {
 				'scroll': {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-50%)' }
+				},
+				'scroll-fast': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
@@ -121,7 +125,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-				'scroll': 'scroll 30s linear infinite'
+				'scroll': 'scroll 20s linear infinite',
+				'scroll-fast': 'scroll-fast 12s linear infinite'
 			}
 		}
 	},

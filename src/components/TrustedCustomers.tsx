@@ -91,7 +91,7 @@ const TrustedCustomers = () => {
             <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
             <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-background via-background/80 to-transparent z-10"></div>
             
-            <div className="flex animate-scroll gap-12 md:gap-24 lg:gap-32">
+            <div className="flex animate-scroll-fast md:animate-scroll gap-6 md:gap-12 lg:gap-16">
               {/* Use duplicated customers for natural spacing */}
               {duplicatedCustomers.map((customer, index) => (
                 <div key={`logo-${index}`} className="flex-shrink-0 flex items-center justify-center">
