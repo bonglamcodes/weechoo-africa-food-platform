@@ -97,12 +97,12 @@ const TrustedCustomers = () => {
             <div className="flex animate-scroll gap-16 md:gap-20 lg:gap-24">
               {/* First set of logos */}
               {customers.map((customer, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0 flex flex-col items-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center group">
+                <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center">
+                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 group-hover:scale-110 transition-transform"
+                      className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transition-transform scale-125"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
@@ -113,12 +113,12 @@ const TrustedCustomers = () => {
               ))}
               {/* Second set for seamless loop */}
               {customers.map((customer, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0 flex flex-col items-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center group">
+                <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center">
+                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 group-hover:scale-110 transition-transform"
+                      className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transition-transform scale-125"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
@@ -129,12 +129,12 @@ const TrustedCustomers = () => {
               ))}
               {/* Third set to ensure truly seamless infinite loop */}
               {customers.map((customer, index) => (
-                <div key={`third-${index}`} className="flex-shrink-0 flex flex-col items-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center group">
+                <div key={`third-${index}`} className="flex-shrink-0 flex items-center justify-center">
+                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 group-hover:scale-110 transition-transform"
+                      className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transition-transform scale-125"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
