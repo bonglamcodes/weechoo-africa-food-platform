@@ -95,11 +95,11 @@ const TrustedCustomers = () => {
               {/* Use duplicated customers for natural spacing */}
               {duplicatedCustomers.map((customer, index) => (
                 <div key={`logo-${index}`} className="flex-shrink-0 flex items-center justify-center">
-                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
+                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group bg-white/60 backdrop-blur-sm rounded-2xl border border-border/10 shadow-sm hover:shadow-md transition-all duration-300">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transition-transform scale-125"
+                      className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
@@ -111,11 +111,11 @@ const TrustedCustomers = () => {
               {/* Additional set for seamless infinite loop */}
               {duplicatedCustomers.map((customer, index) => (
                 <div key={`loop-${index}`} className="flex-shrink-0 flex items-center justify-center">
-                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group">
+                  <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center group bg-white/60 backdrop-blur-sm rounded-2xl border border-border/10 shadow-sm hover:shadow-md transition-all duration-300">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transition-transform scale-125"
+                      className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
