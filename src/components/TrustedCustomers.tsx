@@ -1,6 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Building2, Users, Star, Award, MapPin } from "lucide-react";
 import pavelonLogo from "@/assets/pavelon.png";
 import ascendLogo from "@/assets/ascend.png";
@@ -103,65 +101,56 @@ const TrustedCustomers = () => {
           </p>
         </div>
 
-        {/* Customer Carousel */}
-        <div className="mb-16">
+        {/* Auto-scrolling Customer Logos */}
+        <div className="mb-16 overflow-hidden">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Companies We're Proud to Serve</h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-6xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
+          
+          <div className="relative">
+            <div className="flex animate-scroll">
+              {/* First set of logos */}
               {customers.map((customer, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="border-border/20 bg-card/50 hover:shadow-warm transition-all duration-300 hover:scale-105 h-full">
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <div className="flex items-start space-x-4 mb-4">
-                        <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2 shadow-sm">
-                          {typeof customer.logo === 'string' ? (
-                            <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
-                              {customer.logo}
-                            </div>
-                          ) : (
-                            <img 
-                              src={customer.logo} 
-                              alt={`${customer.name} logo`} 
-                              className="w-full h-full object-contain"
-                            />
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-xl font-semibold text-foreground mb-1">{customer.name}</h4>
-                          <Badge variant="outline" className="text-xs">
-                            {customer.industry}
-                          </Badge>
-                        </div>
+                <div key={`first-${index}`} className="flex-shrink-0 mx-8">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-4 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
+                    {typeof customer.logo === 'string' ? (
+                      <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+                        {customer.logo}
                       </div>
-                      
-                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed flex-grow">
-                        {customer.description}
-                      </p>
-                      
-                      <div className="flex items-center justify-between text-sm text-muted-foreground">
-                        <div className="flex items-center space-x-1">
-                          <MapPin className="w-4 h-4" />
-                          <span>{customer.location}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Users className="w-4 h-4" />
-                          <span>{customer.employees}</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
+                    ) : (
+                      <img 
+                        src={customer.logo} 
+                        alt={`${customer.name} logo`} 
+                        className="w-full h-full object-contain"
+                      />
+                    )}
+                  </div>
+                  <p className="text-center mt-3 text-sm font-medium text-muted-foreground truncate">
+                    {customer.name}
+                  </p>
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+              {/* Duplicate set for seamless loop */}
+              {customers.map((customer, index) => (
+                <div key={`second-${index}`} className="flex-shrink-0 mx-8">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-xl flex items-center justify-center p-4 shadow-sm hover:shadow-warm transition-all duration-300 border border-border/20">
+                    {typeof customer.logo === 'string' ? (
+                      <div className="w-full h-full bg-gradient-hero rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+                        {customer.logo}
+                      </div>
+                    ) : (
+                      <img 
+                        src={customer.logo} 
+                        alt={`${customer.name} logo`} 
+                        className="w-full h-full object-contain"
+                      />
+                    )}
+                  </div>
+                  <p className="text-center mt-3 text-sm font-medium text-muted-foreground truncate">
+                    {customer.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Testimonial Section */}
