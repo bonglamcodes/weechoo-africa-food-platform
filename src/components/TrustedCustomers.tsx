@@ -85,52 +85,62 @@ const TrustedCustomers = () => {
           </p>
         </div>
 
-        {/* Auto-scrolling Customer Logos */}
+        {/* Continuous Logo Slider */}
         <div className="mb-20 overflow-hidden">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-16 text-foreground">Companies We're Proud to Serve</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-foreground">Companies We're Proud to Serve</h3>
           
           <div className="relative">
-            {/* Gradient fade effects for seamless appearance */}
-            <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
+            {/* Subtle gradient fade effects */}
+            <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-background via-background/80 to-transparent z-10"></div>
             
-            <div className="flex animate-scroll gap-12 md:gap-16">
+            <div className="flex animate-scroll gap-16 md:gap-20 lg:gap-24">
               {/* First set of logos */}
               {customers.map((customer, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0">
-                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-white rounded-2xl flex items-center justify-center p-1 shadow-elegant hover:shadow-warm transition-all duration-300 border border-border/10 hover:scale-105">
+                <div key={`first-${index}`} className="flex-shrink-0 flex flex-col items-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain p-1"
+                      className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 group-hover:scale-110 transition-transform"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
                       }}
                     />
                   </div>
-                  <p className="text-center mt-4 text-xs md:text-sm font-medium text-muted-foreground truncate max-w-[80px] md:max-w-[112px] lg:max-w-[128px]">
-                    {customer.name}
-                  </p>
                 </div>
               ))}
-              {/* Duplicate set for seamless loop */}
+              {/* Second set for seamless loop */}
               {customers.map((customer, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0">
-                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-white rounded-2xl flex items-center justify-center p-1 shadow-elegant hover:shadow-warm transition-all duration-300 border border-border/10 hover:scale-105">
+                <div key={`second-${index}`} className="flex-shrink-0 flex flex-col items-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center group">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
-                      className="w-full h-full object-contain p-1"
+                      className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 group-hover:scale-110 transition-transform"
                       onError={(e) => {
                         console.log(`Failed to load image: ${customer.logo}`);
                         e.currentTarget.style.display = 'none';
                       }}
                     />
                   </div>
-                  <p className="text-center mt-4 text-xs md:text-sm font-medium text-muted-foreground truncate max-w-[80px] md:max-w-[112px] lg:max-w-[128px]">
-                    {customer.name}
-                  </p>
+                </div>
+              ))}
+              {/* Third set to ensure truly seamless infinite loop */}
+              {customers.map((customer, index) => (
+                <div key={`third-${index}`} className="flex-shrink-0 flex flex-col items-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center group">
+                    <img 
+                      src={customer.logo} 
+                      alt={`${customer.name} logo`} 
+                      className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 group-hover:scale-110 transition-transform"
+                      onError={(e) => {
+                        console.log(`Failed to load image: ${customer.logo}`);
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
