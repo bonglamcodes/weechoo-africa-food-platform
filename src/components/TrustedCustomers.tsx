@@ -96,7 +96,7 @@ const TrustedCustomers = () => {
               {/* Seamless infinite loop - render duplicated customers */}
               {duplicatedCustomers.map((customer, index) => (
                 <div key={`seamless-${index}`} className="flex-shrink-0 flex items-center justify-center">
-                  <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center group md:bg-white/60 md:backdrop-blur-sm md:rounded-2xl md:border md:border-border/10 md:shadow-sm hover:md:shadow-md transition-all duration-300">
+                  <div className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 flex items-center justify-center group md:bg-white/60 md:backdrop-blur-sm md:rounded-2xl md:border md:border-border/10 md:shadow-sm hover:md:shadow-md transition-all duration-300">
                     <img 
                       src={customer.logo} 
                       alt={`${customer.name} logo`} 
