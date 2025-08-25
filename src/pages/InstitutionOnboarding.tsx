@@ -8,9 +8,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Building2, Users, Calendar } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const InstitutionOnboarding = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     companyName: "",
     contactName: "",
@@ -41,10 +45,41 @@ const InstitutionOnboarding = () => {
     }
   };
 
-  const handleSubmit = () => {
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    setCurrentStep(4); // Success step
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      // Call Supabase Edge Function to send email
+      const { data, error } = await supabase.functions.invoke('send-onboarding-email', {
+        body: formData
+      });
+
+      if (error) {
+        console.error('Error sending email:', error);
+        toast({
+          title: "Submission Failed",
+          description: "There was an error submitting your application. Please try again.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      console.log("Form submitted and email sent:", formData);
+      toast({
+        title: "Application Submitted!",
+        description: "We've received your application and will be in touch within 24 hours.",
+      });
+      setCurrentStep(4); // Success step
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderStep = () => {
@@ -283,8 +318,12 @@ const InstitutionOnboarding = () => {
                       Next Step
                     </Button>
                   ) : (
-                    <Button onClick={handleSubmit} variant="hero">
-                      Submit Application
+                    <Button 
+                      onClick={handleSubmit} 
+                      variant="hero"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                     </Button>
                   )}
                 </div>
