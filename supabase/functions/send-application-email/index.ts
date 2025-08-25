@@ -81,7 +81,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Weechoo Platform <onboarding@resend.dev>",
-      to: ["wechuasilas@gmail.com"],
+      to: ["bonglamgh@gmail.com"], // Using verified email address
       subject: `New Institution Application: ${applicationData.companyName}`,
       html: emailHtml,
     });
