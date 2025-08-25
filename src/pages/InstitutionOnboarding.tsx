@@ -75,6 +75,24 @@ const InstitutionOnboarding = () => {
       }
 
       console.log("Application saved successfully:", data);
+
+      // Send email notification
+      try {
+        const emailResponse = await supabase.functions.invoke('send-application-email', {
+          body: formData
+        });
+
+        if (emailResponse.error) {
+          console.error('Error sending email:', emailResponse.error);
+          // Don't fail the entire submission if email fails
+        } else {
+          console.log("Email sent successfully:", emailResponse.data);
+        }
+      } catch (emailError) {
+        console.error('Email sending failed:', emailError);
+        // Don't fail the entire submission if email fails
+      }
+
       toast({
         title: "Application Submitted!",
         description: "We've received your application and will be in touch within 24 hours.",
