@@ -48,28 +48,23 @@ const InstitutionOnboarding = () => {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
-      // Check if Supabase is properly configured
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      
-      if (!supabaseUrl || supabaseUrl === '') {
-        // Fallback: Log the form data for now
-        console.log("Form submitted (Supabase not configured):", formData);
-        toast({
-          title: "Form Submitted!",
-          description: "Your application has been recorded. Please set up Supabase integration for email functionality.",
+      // Save form data to Supabase
+      const { data, error } = await supabase
+        .from('institution_applications')
+        .insert({
+          company_name: formData.companyName,
+          contact_name: formData.contactName,
+          email: formData.email,
+          phone: formData.phone,
+          company_size: formData.companySize,
+          industry: formData.industry,
+          location: formData.location,
+          meal_budget: formData.mealBudget,
+          requirements: formData.requirements
         });
-        setCurrentStep(4); // Success step
-        setIsSubmitting(false);
-        return;
-      }
-
-      // Call Supabase Edge Function to send email
-      const { data, error } = await supabase.functions.invoke('send-onboarding-email', {
-        body: formData
-      });
 
       if (error) {
-        console.error('Error sending email:', error);
+        console.error('Error saving application:', error);
         toast({
           title: "Submission Failed",
           description: "There was an error submitting your application. Please try again.",
@@ -79,7 +74,7 @@ const InstitutionOnboarding = () => {
         return;
       }
 
-      console.log("Form submitted and email sent:", formData);
+      console.log("Application saved successfully:", data);
       toast({
         title: "Application Submitted!",
         description: "We've received your application and will be in touch within 24 hours.",
