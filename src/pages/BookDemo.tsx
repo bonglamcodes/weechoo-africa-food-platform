@@ -109,7 +109,7 @@ const BookDemo = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name *</Label>
+                    <Label htmlFor="firstName">First Name <span className="text-destructive">*</span></Label>
                     <Input
                       id="firstName"
                       value={formData.firstName}
@@ -119,7 +119,7 @@ const BookDemo = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Label htmlFor="lastName">Last Name <span className="text-destructive">*</span></Label>
                     <Input
                       id="lastName"
                       value={formData.lastName}
@@ -132,7 +132,7 @@ const BookDemo = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="email">Work Email *</Label>
+                    <Label htmlFor="email">Work Email <span className="text-destructive">*</span></Label>
                     <Input
                       id="email"
                       type="email"
@@ -143,7 +143,7 @@ const BookDemo = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Label htmlFor="phone">Phone Number <span className="text-destructive">*</span></Label>
                     <Input
                       id="phone"
                       value={formData.phone}
@@ -156,7 +156,7 @@ const BookDemo = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company Name *</Label>
+                    <Label htmlFor="company">Company Name <span className="text-destructive">*</span></Label>
                     <Input
                       id="company"
                       value={formData.company}
@@ -166,7 +166,7 @@ const BookDemo = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="jobTitle">Job Title *</Label>
+                    <Label htmlFor="jobTitle">Job Title <span className="text-destructive">*</span></Label>
                     <Input
                       id="jobTitle"
                       value={formData.jobTitle}
@@ -179,7 +179,7 @@ const BookDemo = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="companySize">Company Size *</Label>
+                    <Label htmlFor="companySize">Company Size <span className="text-destructive">*</span></Label>
                     <Select onValueChange={(value) => setFormData({ ...formData, companySize: value })}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select company size" />
