@@ -19,9 +19,7 @@ const BookDemo = () => {
     company: "",
     jobTitle: "",
     companySize: "",
-    timeSlot: "",
-    interests: "",
-    message: ""
+    interests: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -177,36 +175,20 @@ const BookDemo = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="companySize">Company Size <span className="text-destructive">*</span></Label>
-                    <Select onValueChange={(value) => setFormData({ ...formData, companySize: value })}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select company size" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="1-10">1-10 employees</SelectItem>
-                        <SelectItem value="11-50">11-50 employees</SelectItem>
-                        <SelectItem value="51-200">51-200 employees</SelectItem>
-                        <SelectItem value="201-500">201-500 employees</SelectItem>
-                        <SelectItem value="500+">500+ employees</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="timeSlot">Preferred Time Slot</Label>
-                    <Select onValueChange={(value) => setFormData({ ...formData, timeSlot: value })}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select preferred time" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="morning">Morning (9:00 AM - 12:00 PM)</SelectItem>
-                        <SelectItem value="afternoon">Afternoon (12:00 PM - 3:00 PM)</SelectItem>
-                        <SelectItem value="evening">Evening (3:00 PM - 6:00 PM)</SelectItem>
-                        <SelectItem value="flexible">I'm flexible</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                <div className="space-y-2">
+                  <Label htmlFor="companySize">Company Size <span className="text-destructive">*</span></Label>
+                  <Select onValueChange={(value) => setFormData({ ...formData, companySize: value })}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select company size" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="1-10">1-10 employees</SelectItem>
+                      <SelectItem value="11-50">11-50 employees</SelectItem>
+                      <SelectItem value="51-200">51-200 employees</SelectItem>
+                      <SelectItem value="201-500">201-500 employees</SelectItem>
+                      <SelectItem value="500+">500+ employees</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div className="space-y-2">
@@ -225,16 +207,6 @@ const BookDemo = () => {
                   </Select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Additional Information</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your current meal program, specific challenges, or any questions you have..."
-                    rows={4}
-                  />
-                </div>
 
                 <div className="bg-gradient-warm p-6 rounded-lg">
                   <h4 className="font-semibold mb-3 flex items-center">
